@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -52,7 +54,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
   }
 
@@ -62,19 +64,19 @@
   h4,
   h5,
   h6 {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 300;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
     letter-spacing: -0.02em;
   }
 }
 
 @layer utilities {
   .font-display {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Manrope", sans-serif;
   }
 
   .font-body {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 }
 
