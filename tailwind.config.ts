@@ -20,8 +20,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				display: ['Manrope', 'sans-serif'],
+				display: ['Cinzel', 'serif'],
 				body: ['Inter', 'sans-serif'],
+				manrope: ['Manrope', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

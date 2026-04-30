@@ -4,27 +4,27 @@ import Icon from "@/components/ui/icon";
 const faqs = [
   {
     q: "Сколько стоит разработка сайта?",
-    a: "Стоимость зависит от типа и сложности проекта. Лендинги — от 60 000 ₽, корпоративные сайты — от 150 000 ₽, интернет-магазины — от 300 000 ₽. Используйте наш калькулятор для точного расчёта.",
+    a: "Стоимость зависит от типа проекта. Одностраничный — от 60 000 ₽, многостраничный — от 150 000 ₽, интернет-магазин — от 300 000 ₽. Точную цену определяем после брифинга.",
   },
   {
-    q: "Сколько времени занимает разработка?",
-    a: "Лендинг — 2–3 недели, корпоративный сайт — 6–8 недель, интернет-магазин — 2–3 месяца, веб-приложение — 3–6 месяцев. Сроки фиксируются в договоре.",
+    q: "Сколько времени занимает создание?",
+    a: "Одностраничный сайт — 2–3 недели, многостраничный — 6–8 недель, интернет-магазин — 2–3 месяца. Сроки фиксируются в договоре.",
   },
   {
-    q: "Вы работаете с клиентами из других городов?",
-    a: "Да, большинство наших клиентов — из других городов и стран. Весь процесс выстроен для удалённой работы: видеозвонки, Figma, Notion, Telegram.",
+    q: "Вы работаете удалённо?",
+    a: "Да. Весь процесс выстроен для дистанционной работы: видеозвонки, Figma, Notion, Telegram. Большинство моих клиентов — из других городов.",
   },
   {
     q: "Что входит в поддержку после запуска?",
-    a: "Первые 30 дней — бесплатная гарантийная поддержка. Далее — пакеты поддержки от 15 000 ₽/мес: обновления, резервные копии, мелкие доработки и консультации.",
+    a: "Первые 30 дней — бесплатная гарантийная поддержка. Далее — пакеты от 15 000 ₽/мес: обновления, резервные копии, мелкие доработки и консультации.",
   },
   {
-    q: "Вы используете готовые шаблоны?",
-    a: "Нет. Каждый сайт проектируется с нуля под конкретный бизнес. Это занимает больше времени, но даёт уникальный результат и лучшую конверсию.",
+    q: "Вы используете шаблоны?",
+    a: "Нет. Каждый сайт — уникальный артефакт, созданный с нуля под конкретный бизнес. Никаких конструкторов и шаблонов.",
   },
   {
-    q: "Как проходит оплата?",
-    a: "50% — предоплата при старте, 50% — после приёма работ. Для крупных проектов предусмотрены поэтапные платежи. Работаем официально с договором.",
+    q: "Как происходит оплата?",
+    a: "50% предоплата при старте, 50% после приёма работ. Работаю официально с договором. Для крупных проектов — поэтапные платежи.",
   },
 ];
 
@@ -42,41 +42,51 @@ export default function FAQ() {
   }, []);
 
   return (
-    <section id="faq" className="py-32 px-6 bg-muted/30">
-      <div className="max-w-6xl mx-auto">
+    <section id="faq" className="py-32 px-6 relative overflow-hidden">
+      <div className="absolute right-0 bottom-0 select-none pointer-events-none"
+        style={{ fontSize: "16rem", color: "hsl(270 80% 65% / 0.03)", fontFamily: "serif", lineHeight: 1 }}>
+        問
+      </div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <div ref={ref} className="section-enter">
           <div className="grid md:grid-cols-3 gap-16">
             <div>
-              <p className="text-sm text-muted-foreground tracking-widest uppercase mb-4">FAQ</p>
-              <h2 className="font-display text-5xl leading-tight">Частые<br />вопросы</h2>
-              <p className="text-sm text-muted-foreground mt-6 leading-relaxed">
-                Не нашли ответ? Напишите нам — ответим в течение часа в рабочее время.
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-px w-8" style={{ background: "hsl(270 80% 65% / 0.6)" }} />
+                <p className="text-xs tracking-[0.3em] uppercase" style={{ color: "hsl(270 80% 65%)" }}>
+                  Свиток вопросов
+                </p>
+              </div>
+              <h2 className="font-display text-4xl leading-tight mb-6">Часто<br />Спрашивают</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed font-body">
+                Не нашли ответ на свой вопрос? Напишите — отвечу в течение часа в рабочее время.
               </p>
-              <a
-                href="#contacts"
-                className="inline-block mt-6 border-b border-foreground pb-1 text-sm hover:text-muted-foreground transition-colors"
-              >
-                Задать вопрос →
+              <a href="#contacts"
+                className="inline-flex items-center gap-2 mt-6 text-sm font-manrope transition-colors"
+                style={{ color: "hsl(270 80% 75%)" }}>
+                ✦ Задать вопрос →
               </a>
             </div>
 
-            <div className="md:col-span-2 divide-y divide-border">
+            <div className="md:col-span-2">
               {faqs.map((faq, i) => (
-                <div key={i}>
+                <div key={i} style={{ borderBottom: "1px solid hsl(270 80% 65% / 0.15)" }}>
                   <button
-                    className="w-full flex items-center justify-between py-6 text-left gap-4"
+                    className="w-full flex items-center justify-between py-5 text-left gap-4"
                     onClick={() => setOpen(open === i ? null : i)}
                   >
-                    <span className="font-medium text-sm pr-4">{faq.q}</span>
-                    <Icon
-                      name={open === i ? "Minus" : "Plus"}
-                      size={16}
-                      className="shrink-0 text-muted-foreground"
-                    />
+                    <span className="font-manrope font-medium text-sm pr-4">{faq.q}</span>
+                    <div className="shrink-0 w-6 h-6 flex items-center justify-center"
+                      style={{
+                        border: "1px solid hsl(270 80% 65% / 0.4)",
+                        color: "hsl(270 80% 65%)",
+                      }}>
+                      <Icon name={open === i ? "Minus" : "Plus"} size={12} />
+                    </div>
                   </button>
                   {open === i && (
-                    <div className="pb-6">
-                      <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+                    <div className="pb-5">
+                      <p className="text-sm text-muted-foreground leading-relaxed font-body">{faq.a}</p>
                     </div>
                   )}
                 </div>
