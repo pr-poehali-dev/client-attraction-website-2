@@ -17,33 +17,32 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         <div ref={ref} className="section-enter grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-sm text-muted-foreground tracking-widest uppercase mb-6">О нас</p>
+            <p className="text-sm text-muted-foreground tracking-widest uppercase mb-6">О себе</p>
             <h2 className="font-display text-5xl md:text-6xl leading-tight mb-8">
-              Мы строим<br />цифровой бизнес
+              Строю сайты,<br />которые работают
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              LordSite — веб-студия полного цикла. Мы не просто делаем сайты —
-              мы создаём инструменты, которые работают на ваш бизнес: привлекают клиентов,
-              автоматизируют процессы и увеличивают продажи.
+              Я — независимый веб-разработчик. Не студия, не агентство — один человек,
+              который лично ведёт каждый проект от первого звонка до финального запуска.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              В нашей команде дизайнеры, разработчики, маркетологи и стратеги.
-              Каждый проект проходит через глубокую аналитику перед стартом.
+              Это значит прямая коммуникация, никаких менеджеров и сломанного телефона.
+              Вы всегда знаете, на каком этапе проект и что будет дальше.
             </p>
             <a
               href="#contacts"
               className="inline-block mt-10 border-b border-foreground pb-1 text-sm hover:text-muted-foreground transition-colors"
             >
-              Познакомиться с командой →
+              Написать мне →
             </a>
           </div>
 
           <div className="grid grid-cols-2 gap-6">
             {[
-              { title: "Стратегия", desc: "Анализируем рынок и конкурентов перед каждым проектом" },
-              { title: "Дизайн", desc: "Создаём уникальный визуал, который выделяет вас" },
+              { title: "Стратегия", desc: "Анализирую рынок и конкурентов перед каждым проектом" },
+              { title: "Дизайн", desc: "Создаю уникальный визуал, который выделяет вас" },
               { title: "Разработка", desc: "Чистый код, быстрая загрузка, надёжная инфраструктура" },
-              { title: "Поддержка", desc: "Сопровождаем проекты после запуска 24/7" },
+              { title: "Поддержка", desc: "Сопровождаю проекты после запуска, всегда на связи" },
             ].map((item) => (
               <div key={item.title} className="p-6 border border-border">
                 <h3 className="font-display text-2xl mb-3">{item.title}</h3>
