@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto w-full">
         <div ref={ref} className="section-enter">
           <p className="text-sm text-muted-foreground tracking-widest uppercase mb-8">
-            Веб-студия — с 2018 года
+            Независимый разработчик — с 2018 года
           </p>
           <h1 className="font-display text-6xl md:text-8xl lg:text-[10rem] leading-none tracking-tight mb-10">
             Сайты,<br />
@@ -23,8 +23,8 @@ export default function Hero() {
           </h1>
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 mt-12">
             <p className="text-lg text-muted-foreground max-w-md leading-relaxed">
-              Создаём современные сайты и цифровые продукты для бизнеса.
-              Каждый проект — это продуманная стратегия роста, а не просто красивая картинка.
+              Делаю сайты для бизнеса — один, без посредников и менеджеров.
+              Вы общаетесь напрямую с тем, кто делает работу.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -45,9 +45,9 @@ export default function Hero() {
 
         <div className="grid grid-cols-3 gap-8 mt-24 pt-12 border-t border-border">
           {[
-            { num: "120+", label: "проектов сдано" },
-            { num: "8", label: "лет на рынке" },
-            { num: "94%", label: "клиентов возвращаются" },
+            { num: "60+", label: "проектов запущено" },
+            { num: "7", label: "лет опыта" },
+            { num: "100%", label: "личное участие" },
           ].map((s) => (
             <div key={s.label}>
               <div className="counter-label">{s.num}</div>
